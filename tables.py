@@ -15,6 +15,7 @@ class Article(Base):
 
     external_id = Column(String(), nullable=False, unique=True)
     name = Column(String(), nullable=False)
+    brand = Column(String(), nullable=True)
     packaging = Column(String(), nullable=True)
     image_url = Column(String(), nullable=False)
 
@@ -28,6 +29,7 @@ class Article(Base):
     total_units = Column(Integer(), nullable=True)
     unit_name = Column(String(), nullable=True)
 
+    department = Column(String(), nullable=True)
     category = Column(String(), nullable=False)
     subcategory = Column(String(), nullable=False)
     subtype = Column(String(), nullable=False)

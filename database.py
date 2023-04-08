@@ -55,7 +55,7 @@ class SQLEngine:
 
     def store_df_in_table(self, table_name: str, dataframe: pd.DataFrame) -> None:
         dataframe.to_sql(
-            name=table_name, con=self.engine, if_exists="replace", index=False
+            name=table_name, con=self.engine, if_exists="append", index=False
         )
 
     def store_csv_in_table(self, table_name: str, csv_filepath: str) -> None:
